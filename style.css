@@ -44,7 +44,7 @@ html[data-lang="en"] [lang="zh-CN"] { display: none !important; }
   border-bottom: 1px solid var(--line);
 }
 .nav-logo { font-weight: 800; letter-spacing: -0.02em; text-decoration: none; font-size: 18px; }
-.nav-logo span { color: var(--muted); font-weight: 600; }
+.nav-logo [lang] span { color: var(--muted); font-weight: 600; }
 .nav-links { display: flex; gap: 22px; margin-left: auto; }
 .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
 .nav-links a:hover { color: var(--text); }
