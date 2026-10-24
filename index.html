@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HKbroTher · Portfolio</title>
+  <meta name="description" content="我给自己做了整套销售工具：从客户调研到开发信。I built my own sales toolkit — from prospect research to outreach.">
+  <meta name="theme-color" content="#07080b">
+  <meta property="og:title" content="HKbroTher · Portfolio">
+  <meta property="og:description" content="I built my own sales toolkit — from prospect research to outreach.">
+  <meta property="og:image" content="assets/img/seek-home.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Pick the language before first paint so the page never flashes the wrong one.
+    (function () {
+      var lang;
+      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      if (lang !== 'zh' && lang !== 'en') lang = /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    })();
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav-logo" href="#top">HK<span>broTher</span></a>
+  <nav class="nav-links">
+    <a href="#toolkit"><span lang="zh-CN">销售工具</span><span lang="en">Toolkit</span></a>
+    <a href="#products"><span lang="zh-CN">产品</span><span lang="en">Products</span></a>
+    <a href="#team"><span lang="zh-CN">团队项目</span><span lang="en">Team</span></a>
+    <a href="#contact"><span lang="zh-CN">联系</span><span lang="en">Contact</span></a>
+  </nav>
+  <button class="lang-toggle" type="button" aria-label="切换语言 / Switch language">
+    <span class="opt" data-for="zh">中</span><span class="opt" data-for="en">EN</span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <p class="kicker reveal"><span lang="zh-CN">作品集 · 2026</span><span lang="en">Portfolio · 2026</span></p>
+    <h1 class="reveal">
+      <span lang="zh-CN">从找客户到发邮件，<br><em>我给自己做了整套工具。</em></span>
+      <span lang="en">I built my own sales toolkit —<br><em>from prospect research to outreach.</em></span>
+    </h1>
+    <p class="hero-sub reveal">
+      <span lang="zh-CN">懂产品，也会写代码。我习惯先听清客户的痛点，再把它变成一个真正能用的工具，然后讲清楚它值在哪里。</span>
+      <span lang="en">I understand products and I write code. I start from the customer's pain point, turn it into a tool that actually works, and make its value obvious.</span>
+    </p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="#toolkit"><span lang="zh-CN">看作品</span><span lang="en">See the work</span> ↓</a>
+      <a class="btn btn-ghost" href="https://github.com/HKbroTher" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <ul class="hero-stats reveal">
+      <li><b>5</b><span lang="zh-CN">个独立开发的产品</span><span lang="en">products built solo</span></li>
+      <li><b>3</b><span lang="zh-CN">个团队项目</span><span lang="en">team projects</span></li>
+      <li><b>3</b><span lang="zh-CN">种工作语言：中 / 英 / 日</span><span lang="en">languages: ZH / EN / JA</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ CHAPTER 01 ============ -->
+  <section class="chapter" id="toolkit">
+    <p class="chapter-no">01</p>
+    <h2 class="reveal"><span lang="zh-CN">销售工具箱</span><span lang="en">The Sales Toolkit</span></h2>
+    <p class="chapter-sub reveal">
+      <span lang="zh-CN">调研客户、写开发信、筛选机会：我把销售流程里最费时间的三件事，各做成了一个工具。</span>
+      <span lang="en">Researching accounts, writing outreach, filtering opportunities: I turned the three most time-consuming parts of the job into three tools.</span>
+    </p>
+  </section>
+
+  <!-- Seek -->
+  <section class="product" id="seek" style="--accent:#4f7dff; --accent-2:#8fb0ff;">
+    <div class="product-head reveal">
+      <p class="product-kicker">Seek · <span lang="zh-CN">企业信息检索助手</span><span lang="en">Prospect research assistant</span></p>
+      <h3>
+        <span lang="zh-CN">30 秒，看懂一家潜在客户。</span>
+        <span lang="en">Know your prospect in 30 seconds.</span>
+      </h3>
+    </div>
+    <div class="shot-wide reveal">
+      <a href="assets/img/seek-home.webp" target="_blank"><img src="assets/img/seek-home.webp" width="1800" height="1125" loading="lazy" alt="Seek 首页 / Seek home screen"></a>
+    </div>
+    <div class="pitch reveal">
+      <div>
+        <h4><span lang="zh-CN">痛点</span><span lang="en">The problem</span></h4>
+        <p><span lang="zh-CN">拜访客户前要翻官网、新闻稿、年报，一家公司就得花半小时。信息零散，还不知道哪句靠得住。</span>
+           <span lang="en">Account prep means digging through websites, press releases and annual reports — half an hour per company, and you never know which claim to trust.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">方案</span><span lang="en">The solution</span></h4>
+        <p><span lang="zh-CN">输入公司名和网址，Seek 自动抓取资料，生成「概况 / 业务线 / 产品 / 目标市场」四段画像，每句话都附上来源原文。</span>
+           <span lang="en">Enter a company name and a few URLs. Seek reads the pages and writes a four-part profile — overview, business lines, products, target markets — with every sentence cited.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">价值</span><span lang="en">The value</span></h4>
+        <p><span lang="zh-CN">找不到依据的内容自动剔除，不会把编造的信息带进客户会议。数据和密钥只留在本机。</span>
+           <span lang="en">Anything without a source is removed automatically, so nothing made-up reaches a client meeting. Data and keys never leave your machine.</span></p>
+      </div>
+    </div>
+    <ul class="facts reveal">
+      <li><b>4</b><span lang="zh-CN">段结构化画像</span><span lang="en">sections per profile</span></li>
+      <li><b>100%</b><span lang="zh-CN">结论附来源</span><span lang="en">of claims cited</span></li>
+      <li><b>4+</b><span lang="zh-CN">家大模型可选</span><span lang="en">LLM providers</span></li>
+      <li><b>Win / Mac</b><span lang="zh-CN">一键安装</span><span lang="en">installers</span></li>
+    </ul>
+    <div class="shot-pair reveal">
+      <a href="assets/img/seek-settings.webp" target="_blank"><img src="assets/img/seek-settings.webp" width="1800" height="1125" loading="lazy" alt="Seek 设置：选择大模型和向量化服务 / Choosing model providers"></a>
+    </div>
+    <p class="tech reveal">Python · FastAPI · RAG · ChromaDB · Claude / OpenAI SDK · pywebview · PyInstaller · GitHub Actions</p>
+    <p class="links reveal"><a href="https://github.com/HKbroTher/Firm-Checker" target="_blank" rel="noopener">GitHub ↗</a></p>
+  </section>
+
+  <!-- Bard -->
+  <section class="product" id="bard" style="--accent:#e8a33d; --accent-2:#ffd28a;">
+    <div class="product-head reveal">
+      <p class="product-kicker">Bard · <span lang="zh-CN">多语言商务邮件助手</span><span lang="en">Multilingual business email</span></p>
+      <h3>
+        <span lang="zh-CN">一份要点，三种语言的专业开发信。</span>
+        <span lang="en">One brief. Three languages. Ready to send.</span>
+      </h3>
+    </div>
+    <div class="shot-wide reveal">
+      <a href="assets/img/bard-conversation.webp" target="_blank"><img src="assets/img/bard-conversation.webp" width="1280" height="820" loading="lazy" alt="Bard 对话式修改邮件 / Revising an email by conversation"></a>
+    </div>
+    <div class="pitch reveal">
+      <div>
+        <h4><span lang="zh-CN">痛点</span><span lang="en">The problem</span></h4>
+        <p><span lang="zh-CN">跨国客户要用英文、日文沟通，语气和礼仪很难拿捏；产品名、术语也经常前后写得不一样。</span>
+           <span lang="en">Writing to clients in English or Japanese means guessing at tone and etiquette — and product names drift from one email to the next.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">方案</span><span lang="en">The solution</span></h4>
+        <p><span lang="zh-CN">用任何语言写下要点，Bard 生成完整邮件。之后说一句「再正式一点」「加一句可提供样品」就能改，每一版都保留。</span>
+           <span lang="en">Jot down the key points in any language and Bard writes the full email. Then just say "more formal" or "offer a free sample" — every version is kept.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">价值</span><span lang="en">The value</span></h4>
+        <p><span lang="zh-CN">按各国商务习惯来写，比如日语敬语、中文的「此致 敬礼」。三语术语表保证全团队对外口径一致。</span>
+           <span lang="en">Each language follows its own business conventions, from Japanese keigo to Chinese sign-offs. A shared trilingual glossary keeps the whole team on-message.</span></p>
+      </div>
+    </div>
+    <ul class="facts reveal">
+      <li><b>3</b><span lang="zh-CN">种语言：中 / 英 / 日</span><span lang="en">languages: ZH / EN / JA</span></li>
+      <li><b>9</b><span lang="zh-CN">种销售场景模板</span><span lang="en">sales scenario templates</span></li>
+      <li><b>6 × 3</b><span lang="zh-CN">种语气 × 正式程度</span><span lang="en">tones × formality levels</span></li>
+      <li><b>7+</b><span lang="zh-CN">家模型服务可接入</span><span lang="en">model providers</span></li>
+    </ul>
+    <div class="shot-pair two reveal">
+      <a href="assets/img/bard-glossary.webp" target="_blank"><img src="assets/img/bard-glossary.webp" width="1280" height="820" loading="lazy" alt="Bard 术语表 / Glossary"></a>
+      <a href="assets/img/bard-home-dark-en.webp" target="_blank"><img src="assets/img/bard-home-dark-en.webp" width="1280" height="820" loading="lazy" alt="Bard 深色模式英文界面 / Dark mode, English UI"></a>
+    </div>
+    <p class="tech reveal">Electron · React · TypeScript · SQLite · Claude / OpenAI / Gemini SDK · Vitest · electron-builder</p>
+    <p class="links reveal"><a href="https://github.com/HKbroTher/Mail-Assistant" target="_blank" rel="noopener">GitHub ↗</a></p>
+  </section>
+
+  <!-- GhostCheck -->
+  <section class="product split" id="ghostcheck" style="--accent:#3ddc84; --accent-2:#a5f3c4;">
+    <div class="split-text">
+      <div class="product-head reveal">
+        <p class="product-kicker">GhostCheck · <span lang="zh-CN">LinkedIn 幽灵职位检测插件</span><span lang="en">Ghost-job detector for LinkedIn</span></p>
+        <h3>
+          <span lang="zh-CN">这个职位，真的在招人吗？</span>
+          <span lang="en">Is this job actually hiring?</span>
+        </h3>
+      </div>
+      <div class="pitch stacked reveal">
+        <div>
+          <h4><span lang="zh-CN">痛点</span><span lang="en">The problem</span></h4>
+          <p><span lang="zh-CN">LinkedIn 上很多职位早就不招了，或者只是挂着撑门面，求职者投了也是白投。</span>
+             <span lang="en">Many LinkedIn postings are long closed or never meant to be filled. Every application to one is wasted time.</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh-CN">方案</span><span lang="en">The solution</span></h4>
+          <p><span lang="zh-CN">Chrome 插件，在职位旁边直接打上 🟢🟡🔴 标签，背后同时比对公司官方招聘系统、发布日期和网页存档。</span>
+             <span lang="en">A Chrome extension that puts a 🟢🟡🔴 badge next to each job, after checking the company's own careers site, posting dates and web archives.</span></p>
+        </div>
+        <div>
+          <h4><span lang="zh-CN">价值</span><span lang="en">The value</span></h4>
+          <p><span lang="zh-CN">点开标签就能看到 3–5 条判断理由。免费、不用注册，全程在浏览器本地运行。</span>
+             <span lang="en">One click shows the 3–5 reasons behind the verdict. Free, no account, runs entirely in your browser.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="split-shot reveal">
+      <a href="assets/img/ghostcheck-card.webp" target="_blank"><img src="assets/img/ghostcheck-card.webp" width="900" height="960" loading="lazy" alt="GhostCheck 标签和判断详情 / Badge and reasons card"></a>
+    </div>
+    <ul class="facts reveal">
+      <li><b>224</b><span lang="zh-CN">个真实职位实测</span><span lang="en">real postings tested</span></li>
+      <li><b>0</b><span lang="zh-CN">次匹配到错误职位</span><span lang="en">wrong-job matches</span></li>
+      <li><b>10+</b><span lang="zh-CN">类招聘平台接入</span><span lang="en">careers platforms</span></li>
+      <li><b>$0</b><span lang="zh-CN">无服务器、无账号</span><span lang="en">no server, no account</span></li>
+    </ul>
+    <p class="tech reveal">Chrome Extension MV3 · JavaScript · Transformers.js (on-device AI) · Fuzzy matching · Wikidata · GitHub Actions</p>
+    <p class="links reveal"><a href="https://github.com/HKbroTher/Job-Detector" target="_blank" rel="noopener">GitHub ↗</a></p>
+  </section>
+
+  <!-- ============ CHAPTER 02 ============ -->
+  <section class="chapter" id="products">
+    <p class="chapter-no">02</p>
+    <h2 class="reveal"><span lang="zh-CN">产品与体验</span><span lang="en">Products &amp; Experiences</span></h2>
+    <p class="chapter-sub reveal">
+      <span lang="zh-CN">不只是工具：我也在做让用户愿意每天打开的产品。</span>
+      <span lang="en">Beyond tools: products people want to open every day.</span>
+    </p>
+  </section>
+
+  <!-- app-1 -->
+  <section class="product" id="app1" style="--accent:#ff4fa3; --accent-2:#b18cff;">
+    <div class="product-head reveal">
+      <p class="product-kicker">app-1 · <span lang="zh-CN">多平台照片展览社交平台（开发中）</span><span lang="en">Photo exhibition social app (in progress)</span></p>
+      <h3>
+        <span lang="zh-CN">让每一组照片，都像一场限时展览。</span>
+        <span lang="en">Every photo set becomes a limited-time exhibition.</span>
+      </h3>
+    </div>
+    <div class="phones reveal">
+      <img src="assets/img/app1-explore-placeholder.webp" width="900" height="1948" loading="lazy" alt="首页瀑布流 / Explore feed">
+      <img src="assets/img/app1-exhibition-placeholder.webp" width="900" height="1948" loading="lazy" alt="展览详情 / Exhibition viewer">
+      <img src="assets/img/app1-profile-placeholder.webp" width="900" height="1948" loading="lazy" alt="个人主页 / Profile">
+    </div>
+    <div class="pitch reveal">
+      <div>
+        <h4><span lang="zh-CN">洞察</span><span lang="en">The insight</span></h4>
+        <p><span lang="zh-CN">无限滚动的信息流让好照片很快被淹没，用户也缺少「非看不可」的理由。</span>
+           <span lang="en">In an endless feed, great photos sink fast — and nobody has a reason to show up at a particular moment.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">方案</span><span lang="en">The solution</span></h4>
+        <p><span lang="zh-CN">每场展览固定 9 张作品，需要提前预约开展，开展前 30 分钟锁定，到点才对观众开放，结束后归档。</span>
+           <span lang="en">Each exhibition is exactly 9 works, scheduled in advance, locked 30 minutes before opening, revealed at showtime and archived after.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">价值</span><span lang="en">The value</span></h4>
+        <p><span lang="zh-CN">用限时和稀缺制造期待感，把「刷一刷」变成「准时来看」，这是一种做留存的产品思路。</span>
+           <span lang="en">Scarcity and timing turn scrolling into showing up — a retention mechanic built into the product itself.</span></p>
+      </div>
+    </div>
+    <p class="tech reveal">React Native · Expo Router · TypeScript · Skia · Reanimated · Zustand · React Query · iOS / Android / Web</p>
+    <p class="links reveal"><a href="https://github.com/HKbroTher/app-1" target="_blank" rel="noopener">GitHub ↗</a></p>
+  </section>
+
+  <!-- RogueAim -->
+  <section class="product" id="rogueaim" style="--accent:#22f2a0; --accent-2:#ffc94d;">
+    <div class="product-head reveal">
+      <p class="product-kicker">RogueAim · <span lang="zh-CN">肉鸽练枪游戏（网页原型）</span><span lang="en">Roguelike aim trainer (web prototype)</span></p>
+      <h3>
+        <span lang="zh-CN">把枯燥的练枪，变成停不下来的游戏。</span>
+        <span lang="en">Aim training you can't put down.</span>
+      </h3>
+    </div>
+    <div class="shot-wide reveal">
+      <a href="assets/img/rogueaim-gameplay.webp" target="_blank"><img src="assets/img/rogueaim-gameplay.webp" width="1280" height="720" loading="lazy" alt="RogueAim 实战画面 / Gameplay"></a>
+    </div>
+    <div class="pitch reveal">
+      <div>
+        <h4><span lang="zh-CN">痛点</span><span lang="en">The problem</span></h4>
+        <p><span lang="zh-CN">Aim Lab 这类练枪软件很枯燥，大部分玩家练不了几天就放弃了。</span>
+           <span lang="en">Aim trainers are a grind. Most players quit within days.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">方案</span><span lang="en">The solution</span></h4>
+        <p><span lang="zh-CN">把纯手动瞄准和 Roguelike 的成长系统结合：每一发都靠自己打中，但每一局都有新的流派搭配。</span>
+           <span lang="en">Pure manual aim meets roguelike progression: every hit is yours, but every run plays out a different build.</span></p>
+      </div>
+      <div>
+        <h4><span lang="zh-CN">价值</span><span lang="en">The value</span></h4>
+        <p><span lang="zh-CN">灵敏度和 CS2 / Valorant 1:1 换算，玩家打开就能用自己的手感练，零迁移成本。</span>
+           <span lang="en">Sensitivity converts 1:1 from CS2 and Valorant, so players train with their real settings from the first second.</span></p>
+      </div>
+    </div>
+    <ul class="facts reveal">
+      <li><b>20</b><span lang="zh-CN">波关卡</span><span lang="en">waves</span></li>
+      <li><b>4</b><span lang="zh-CN">场 Boss 战</span><span lang="en">boss fights</span></li>
+      <li><b>50+</b><span lang="zh-CN">种强化，3 大流派</span><span lang="en">upgrades, 3 builds</span></li>
+      <li><b>1:1</b><span lang="zh-CN">CS2 灵敏度</span><span lang="en">CS2 sensitivity</span></li>
+    </ul>
+    <div class="shot-pair reveal">
+      <a href="assets/img/rogueaim-menu.webp" target="_blank"><img src="assets/img/rogueaim-menu.webp" width="1800" height="1125" loading="lazy" alt="RogueAim 主菜单 / Main menu"></a>
+    </div>
+    <p class="tech reveal">Three.js · JavaScript (ES Modules) · Pointer Lock API · Web Audio · localStorage</p>
+    <p class="links reveal">
+      <a class="btn btn-primary small" href="https://hkbrother.github.io/rogueAim/" target="_blank" rel="noopener"><span lang="zh-CN">在线试玩</span><span lang="en">Play in browser</span> ▶</a>
+      <a href="https://github.com/HKbroTher/rogueAim" target="_blank" rel="noopener">GitHub ↗</a>
+    </p>
+  </section>
+
+  <!-- ============ CHAPTER 03 ============ -->
+  <section class="chapter" id="team">
+    <p class="chapter-no">03</p>
+    <h2 class="reveal"><span lang="zh-CN">团队项目</span><span lang="en">Team Projects</span></h2>
+    <p class="chapter-sub reveal">
+      <span lang="zh-CN">和同学一起，从需求到交付完整走一遍。</span>
+      <span lang="en">Built with classmates, from requirements to delivery.</span>
+    </p>
+  </section>
+
+  <!-- DeskSentry -->
+  <section class="product compact" id="desksentry" style="--accent:#4fb3ff; --accent-2:#b8e2ff;">
+    <div class="product-head reveal">
+      <p class="product-kicker"><span class="badge-team"><span lang="zh-CN">团队项目 · Capstone</span><span lang="en">Team project · Capstone</span></span> DeskSentry</p>
+      <h3>
+        <span lang="zh-CN">不用穿戴，就能守护你的坐姿。</span>
+        <span lang="en">Posture protection — nothing to wear.</span>
+      </h3>
+      <p class="lead">
+        <span lang="zh-CN">非穿戴式坐姿检测设备。桌面传感器实时测量人和屏幕的距离、坐了多久；网页仪表盘每秒最多刷新 10 次，太近或久坐时发出提醒，提醒阈值可以在网页上直接下发给设备。</span>
+        <span lang="en">A non-wearable posture monitor. A desk sensor tracks screen distance and sitting time; the web dashboard updates up to 10 times a second, flags bad posture, and pushes new alert thresholds straight to the device.</span>
+      </p>
+    </div>
+    <div class="shot-pair two reveal">
+      <a href="assets/img/desksentry-normal.webp" target="_blank"><img src="assets/img/desksentry-normal.webp" width="1800" height="1375" loading="lazy" alt="DeskSentry 正常状态 / Normal posture"></a>
+      <a href="assets/img/desksentry-violation.webp" target="_blank"><img src="assets/img/desksentry-violation.webp" width="1800" height="1375" loading="lazy" alt="DeskSentry 距离过近 / Too close"></a>
+    </div>
+    <p class="tech reveal">Node.js · Express · SQLite · SerialPort (UART) · Chart.js · <span lang="zh-CN">硬件 + 软件联动</span><span lang="en">hardware + software</span></p>
+    <p class="links reveal"><a href="https://github.com/gaoyuanshen-maker/capstone/tree/aero-dashboard" target="_blank" rel="noopener">GitHub ↗</a></p>
+  </section>
+
+  <!-- Movie app -->
+  <section class="product compact" id="movies" style="--accent:#ff3b3b; --accent-2:#ff9a9a;">
+    <div class="product-head reveal">
+      <p class="product-kicker"><span class="badge-team"><span lang="zh-CN">团队项目</span><span lang="en">Team project</span></span> MovieApp</p>
+      <h3>
+        <span lang="zh-CN">找电影，按分类一键直达。</span>
+        <span lang="en">Find your next movie, by genre.</span>
+      </h3>
+      <p class="lead">
+        <span lang="zh-CN">Android 原生电影大全 App：登录注册、按类型浏览、电影详情和一句话简介，喜欢的电影一键收藏到「我的」。</span>
+        <span lang="en">A native Android movie guide: sign in, browse by genre, read details and one-line synopses, and save favourites to your own page.</span>
+      </p>
+    </div>
+    <div class="phones small reveal">
+      <img src="assets/img/movie-login.webp" width="452" height="800" loading="lazy" alt="登录 / Login">
+      <img src="assets/img/movie-category.webp" width="447" height="800" loading="lazy" alt="分类 / Categories">
+      <img src="assets/img/movie-detail.webp" width="446" height="800" loading="lazy" alt="电影详情 / Movie detail">
+    </div>
+    <p class="tech reveal">Kotlin · Jetpack Compose · Material 3 · Retrofit · json-server</p>
+    <p class="links reveal"><a href="https://github.com/Solarctic/MobileAppProject" target="_blank" rel="noopener">GitHub ↗</a></p>
+  </section>
+
+  <!-- Text adventure -->
+  <section class="product compact" id="adventure" style="--accent:#f43f5e; --accent-2:#a78bfa;">
+    <div class="product-head reveal">
+      <p class="product-kicker"><span class="badge-team"><span lang="zh-CN">团队项目</span><span lang="en">Team project</span></span> Text Adventure</p>
+      <h3>
+        <span lang="zh-CN">你的每个选择，都会改写结局。</span>
+        <span lang="en">Every choice rewrites the ending.</span>
+      </h3>
+      <p class="lead">
+        <span lang="zh-CN">仿《逆转裁判》的网页剧情推理游戏：视频演出、分支剧情、收集证据，存档和读档会同步到服务器。</span>
+        <span lang="en">A browser courtroom mystery inspired by Ace Attorney: video cutscenes, branching story, evidence to collect, and cloud save/load.</span>
+      </p>
+    </div>
+    <div class="shot-wide reveal">
+      <a href="assets/img/text-adventure-game.webp" target="_blank"><img src="assets/img/text-adventure-game.webp" width="1800" height="1062" loading="lazy" alt="剧情游戏画面 / Game scene"></a>
+    </div>
+    <p class="tech reveal">Vue 3 · Vue Router · Pinia · Tailwind CSS · Vite · json-server</p>
+    <p class="links reveal"><a href="https://github.com/Solarctic/WebAppProject" target="_blank" rel="noopener">GitHub ↗</a></p>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <h2 class="reveal">
+      <span lang="zh-CN">需要一个既懂产品、<br>又能讲清楚价值的人？</span>
+      <span lang="en">Need someone who understands the product<br>and can sell its value?</span>
+    </h2>
+    <p class="reveal">
+      <span lang="zh-CN">欢迎聊聊。</span>
+      <span lang="en">Let's talk.</span>
+    </p>
+    <div class="hero-cta reveal">
+      <!-- TODO: add email and LinkedIn links once provided -->
+      <a class="btn btn-primary" href="https://github.com/HKbroTher" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 HKbroTher</p>
+  <p class="fine">
+    <span lang="zh-CN">剧情游戏的美术素材版权归 Capcom 所有，为同人练习作品；电影海报版权归各版权方所有。</span>
+    <span lang="en">Text Adventure artwork © Capcom, used in a non-commercial fan project. Movie posters © their respective owners.</span>
+  </p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
