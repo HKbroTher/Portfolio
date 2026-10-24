@@ -213,6 +213,9 @@ section { padding: 0 var(--gutter); }
 .contact h2 { text-wrap: balance; font-size: clamp(32px, 5vw, 64px); letter-spacing: -0.03em; line-height: 1.12; margin: 0; }
 .contact p { color: var(--muted); font-size: 18px; margin: 20px 0 32px; }
 .contact .hero-cta { justify-content: center; }
+.contact .contact-mail { margin: 22px 0 0; font-size: 15px; }
+.contact-mail a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
+.contact-mail a:hover { color: var(--text); border-color: var(--text); }
 .footer {
   border-top: 1px solid var(--line); padding: 32px var(--gutter) 48px;
   max-width: var(--max); margin: 0 auto; color: var(--faint); font-size: 13px;
@@ -239,4 +242,5 @@ section { padding: 0 var(--gutter); }
   .phones img:nth-child(2) { transform: translateY(-14px); }
   .product { padding-top: 80px; }
   .chapter { padding-top: 100px; }
+  .contact h2 br { display: none; }
 }
