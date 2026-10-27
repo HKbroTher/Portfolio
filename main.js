@@ -1,10 +1,13 @@
-// Language toggle: swaps data-lang on <html>; CSS hides the other language.
-document.querySelector('.lang-toggle').addEventListener('click', () => {
-  const root = document.documentElement;
-  const lang = root.dataset.lang === 'zh' ? 'en' : 'zh';
-  root.dataset.lang = lang;
-  root.lang = lang === 'zh' ? 'zh-CN' : 'en';
-  try { localStorage.setItem('lang', lang); } catch (e) {}
+// Language toggle: sets data-lang on <html>; CSS hides the other languages.
+const HTML_LANG = { zh: 'zh-CN', en: 'en', ja: 'ja' };
+document.querySelectorAll('.lang-toggle .opt').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.for;
+    const root = document.documentElement;
+    root.dataset.lang = lang;
+    root.lang = HTML_LANG[lang];
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  });
 });
 
 // Fade sections in as they scroll into view.
