@@ -30,8 +30,13 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
 /* ---------- language switching ---------- */
-html[data-lang="zh"] [lang="en"],
-html[data-lang="en"] [lang="zh-CN"] { display: none !important; }
+html[data-lang="zh"] :is([lang="en"], [lang="ja"]):not(.opt),
+html[data-lang="en"] :is([lang="zh-CN"], [lang="ja"]):not(.opt),
+html[data-lang="ja"] :is([lang="zh-CN"], [lang="en"]):not(.opt) { display: none !important; }
+/* Japanese pages need Japanese glyph forms, so prefer JP fonts over the SC ones */
+html[data-lang="ja"] body { font-family: Inter, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", "Noto Sans JP", Meiryo, system-ui, sans-serif; }
+/* Japanese has no spaces; break between phrases instead of mid-word where supported */
+html[data-lang="ja"] :is(h1, h2, h3, h4, p, li) { word-break: auto-phrase; }
 
 /* ---------- nav ---------- */
 .nav {
@@ -50,12 +55,17 @@ html[data-lang="en"] [lang="zh-CN"] { display: none !important; }
 .nav-links a:hover { color: var(--text); }
 .lang-toggle {
   display: inline-flex; padding: 3px; border-radius: 999px;
-  background: var(--bg-2); border: 1px solid var(--line); cursor: pointer;
+  background: var(--bg-2); border: 1px solid var(--line);
+}
+.lang-toggle .opt {
+  padding: 4px 11px; border: 0; border-radius: 999px; cursor: pointer;
+  background: none; color: var(--faint); transition: all .2s;
   font: inherit; font-size: 13px; font-weight: 600;
 }
-.lang-toggle .opt { padding: 4px 11px; border-radius: 999px; color: var(--faint); transition: all .2s; }
+.lang-toggle .opt:hover { color: var(--text); }
 html[data-lang="zh"] .lang-toggle [data-for="zh"],
-html[data-lang="en"] .lang-toggle [data-for="en"] { background: var(--text); color: var(--bg); }
+html[data-lang="en"] .lang-toggle [data-for="en"],
+html[data-lang="ja"] .lang-toggle [data-for="ja"] { background: var(--text); color: var(--bg); }
 
 /* ---------- shared ---------- */
 section { padding: 0 var(--gutter); }

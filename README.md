@@ -1,9 +1,9 @@
 # Portfolio
 
-Bilingual (中文 / English) portfolio site, plain HTML + CSS + JS with no build step.
+Trilingual (中文 / English / 日本語) portfolio site, plain HTML + CSS + JS with no build step.
 
-- `index.html` – all content; each piece of copy appears twice, as `lang="zh-CN"` and `lang="en"` spans
-- `style.css` – layout and theme; the language not selected is hidden via `html[data-lang]`
+- `index.html` – all content; each piece of copy appears three times, as `lang="zh-CN"`, `lang="en"` and `lang="ja"` spans
+- `style.css` – layout and theme; the languages not selected are hidden via `html[data-lang]`
 - `main.js` – language toggle (remembered in localStorage) and scroll-in animation
 - `assets/img/` – web-optimised screenshots used by the page
 - `assets/screenshots/` – original full-resolution screenshots
